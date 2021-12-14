@@ -1,0 +1,171 @@
+<!--
+    Name - Dhruv Sharma
+    Student id - 154181200
+    Section - WEB222NCC
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+<style>
+  body{
+      background-image: linear-gradient(to bottom right, #f3d320, #f5c21a,#23d8db, #abedd8);
+  }
+
+  .hd{
+      color: rgb(31, 12, 12);
+      text-align: center;
+      font-size: 75px;
+  }
+
+  .ort{
+    height: 40px;
+    width: 100%;
+    padding: 2px;
+    padding-top: 7%;
+  }
+
+  .ort1{
+    height: 40px;
+    width: 100%;
+    padding: 2px;
+    padding-top: 3%;
+  }
+
+  .radio{
+    height: 120px;
+    width: 100%;
+    padding: 2px;
+  }
+
+  .rb{
+    padding-left: 5%;
+    width: 50%;
+    font-size: 25px;
+    float: left;
+  }
+
+  .settext{
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    padding-left: 5%;
+    float: left;
+    width: 30%;
+  }
+
+  .settext2{
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    padding-left: 5%;
+    float: left;
+    width: 100%;
+  }
+  
+  .setf{
+    width: 50%;
+    height: 60%;
+  }
+
+  .button{
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 2%;
+    padding-top: 1%;
+    width: 40%;
+    height: 10%;
+  }
+
+
+</style>
+<body>
+
+  <div class="hd">
+    <i><b>Contact Form</i></b>
+  </div>
+
+  <hr style="height:3px;background-color:rgb(255, 0, 0); border: 0;">
+  <br>
+
+  <form action="https://formspree.io/f/mlezenyy" method="post">
+    
+    <div class="ort">
+      <label name="TEXT" class="settext">Name</label>
+      <input type="text" name="NAME" class="setf" required>
+    </div>
+
+    <div class="ort">
+      <label name="EMAIL" class="settext">Email</label>
+      <input type="email" name="EMAIL" class="setf" required>
+    </div>
+
+    <div class="ort">
+      <label name="ADDRESS" class="settext">Address</label>
+      <input type="text" name="ADDRESS" class="setf" required>
+    </div>
+
+    <div class="ort">
+      <label name="CITY" class="settext">City</label>
+      <input  type="text" name="CITY" class="setf" required>
+    </div>
+
+    <div class="ort">
+      <label name="PIN_CODE" class="settext">Postal Code</label>
+      <input type="text" pattern="^[A-Za-z]\d[A-Za-z][ ]?\d[A-za-z]\d$" class="setf" required>
+    </div>
+    <br><br>
+    <div class="radio">
+      <div class="settext2">Select your reason:</div>
+      <div class="rb">
+      <input type="radio" name="CHOICE" checked onclick="tester();">
+      <label name="QUESTION">Question</label>
+      <br>
+      </div>
+
+      <div class="rb">
+      <input type="radio" name="CHOICE" onclick="tester();">
+      <label name="COMMENT">Comment</label>      
+      <br>
+      </div>
+      
+      <div class="rb">
+      <input type="radio" id="hiring" name="CHOICE" onclick="tester();">
+      <label name="HIRING">$/Hr</label>
+      </div>
+      
+    </div>
+    <br><br>
+    <div class="ort" style="padding-left: 4%; height: 150px;">
+      <textarea name="question"  style="width: 90%; height: 150px; resize: none;"></textarea>
+    </div>
+
+    <div id="hr_pay" class="ort1">
+      <label name="hr_pay" style="font-size: 20px; padding-left: 2%;padding-right: 4%;">Enter  your pay rate / hour</label>
+      <input type="number" style="width: 50%; height: 60%; border: 1px solid black;" name="Hr_rate" min="0">  
+    </div>
+
+    <div class="ort" style="padding-left: 10%;padding-bottom: 3%;">
+        <input name="SUBMIT" class="button" type="submit" value="Submit">
+        <input name="RESET" class="button" type="reset" value="Reset">
+    </div>
+  </form>
+</body>
+
+<script>
+  var hr_pay = document.querySelector('#hr_pay');
+  var hiring = document.querySelector('#hiring');
+  hr_pay.style.display = "none";
+
+  function tester(){
+    if(hiring.checked){
+      hr_pay.style.display = "block";
+    }
+    else{
+      hr_pay.style.display = "none";
+    }
+  }
+</script>
+</html>

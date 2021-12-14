@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+.mainbody{
+    background:lightpink;
+    margin-top:0;
+}
+
+.Displaypicture{
+    height:320px;
+    width:320px;
+    border: 10px solid black;
+   background-repeat: no-repeat;
+   margin-top:5%;
+   margin-left:auto;
+   margin-right: auto;
+   display:block;
+}
+.aboutme{
+    color:rgb(0, 0, 0);
+    font-family: "comfortaa";
+    font-size:45px;
+    margin-top:10px;
+    margin-bottom:0px;
+    text-align: center;
+}
+
+.profession{
+    font-family: "comfortaa";
+    color:rgb(0, 0, 0);
+    margin-top:30px;
+    font-size:18px;
+    text-align: center;
+
+}
+
+.buttons{
+     display:inline-flex;
+    margin-left: 500px;
+}
+.b1, .b2,.b3{
+    background-color: rgb(109, 99, 99);
+    border:rgb(37, 20, 20);
+    color: white;
+    padding: 17px 32px;
+    border-radius:25px;
+    text-align: center;
+    font-size: 16px;
+    margin-top:20px;
+    cursor: pointer;
+}
+.b1:focus-visible, .b1:focus-visible, .b3:focus-visible{
+    background-color: rgb(80,80,80);
+}
+
+.contactbtn, .honestybtn{
+    margin-left: 50px;
+}
+i{
+    color:white;
+    font-size:15px;
+    margin-right:8px;
+}
+a{
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+}
+@media screen and (min-width:1280px) and (max-width:1450px){
+    .btns{
+        margin-left:450px;
+    }
+  }
+  @media screen and (min-width:1170px) and (max-width:1285px){
+      .btns{
+          margin-left:405px;
+      }
+  }
+  @media screen and (min-width:1030) and (max-width:1170px){
+      .btns{
+          width:200px;
+          margin-left:430px;
+      }
+      .contactbtn{
+          margin-left:0;
+      }
+  }
+  @media screen and (max-width:1030px){
+      .mainbody{
+          float:left;
+          margin-left:100px;
+      }
+      .btns{
+          margin-left:20px;
+          width:100%;
+      }
+      
+  }
+  
+
+
+
